@@ -30,6 +30,16 @@ main {
   padding: 30px 30px 10px;
 }
 
+ul {
+  padding-left: 0;  /* Removes extra space before bullets */
+  margin-left: 0;   /* Resets browser default margin */
+}
+
+ul > li {
+  padding-left: 0;  /* Removes extra space before bullets */
+  margin-left: 0;   /* Resets browser default margin */
+}
+
 .add-ingredient-form {
   display: flex;
   justify-content: center;
