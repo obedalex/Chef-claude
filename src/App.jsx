@@ -4,6 +4,7 @@ import Main from './components/Main';
 import  Andex  from './components/Andex';
 import Count from './components/Count'
 import Ternary from './components/Ternary'
+import Chef from './components/Chef';
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
       {/* <Header />
       <Main />
       <Andex />
-      <Count /> */}
-      <Ternary />
+      <Count />
+      <Ternary /> */}
+      <Chef />
 
     </>
   );
