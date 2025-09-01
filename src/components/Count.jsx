@@ -1,29 +1,56 @@
 import React from "react"
-import {useState} from "react"
 
-export default function App() {
-    /**
-     * Challenge: 
-     * Create state to track our count value (initial value is 0)
-     * Don't forget to replace the hard-coded "0" with your new state
-     */
-let [count, setCount] = useState(0)
+export default function Count(props) {
 
-function Add(){
-    setCount(prevCount => prevCount + 1)
-}
+     const [count, setCount] = React.useState(0)
 
-function Subtract(){
-    setCount(prevCount => prevCount - 1)
-}
+    function add() {
+        setCount(prevCount => prevCount + 1)
+    }
+
+    function subtract() {
+        setCount(prevCount => prevCount - 1)
+    }
+
+
     return (
         <main className="container">
-            <h1>How many times will Bob say "state" in this section?</h1>
             <div className="counter">
-                <button className="minus" onClick={Subtract} aria-label="Decrease count">–</button>
-                <h2 className="count">{count}</h2>
-                <button className="plus"  onClick={Add} aria-label="Increase count">+</button>
+                <button
+                    className="minus"
+                    onClick={subtract}
+                    aria-label="Decrease count"
+                >-</button>
+
+                    <Count number={count} />
+                    <h2 className="count">{props.number}</h2>
+
+                <button
+                    className="plus"
+                    onClick={add}
+                    aria-label="Increase count"
+                >+</button>
             </div>
         </main>
     )
+ 
+   
+
+
+    
+    /**
+     * Challenge:
+     * - Create a new component called `Count`
+     *    - It should receive a prop called `number`, whose value
+     *      is the current value of our count
+     *    - Have the component render the h2.count element below
+     *      and display the incoming prop `number`
+     * - Replace the h2.count below with an instance of
+     *   the new Count component, passing the correct value
+     *   to its `number` prop.
+     * - After doing this, everything should be working the
+     *   same as before.
+     */
+
+
 }

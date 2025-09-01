@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import  Andex  from './components/Andex';
@@ -7,17 +8,10 @@ import Ternary from './components/Ternary'
 import Chef from './components/Chef';
 
 function App() {
-  return (
-    <>
-      {/* <Header />
-      <Main />
-      <Andex />
-      <Count />
-      <Ternary /> */}
-      <Chef />
 
-    </>
-  );
+      return(
+
+      );
 }
 
 export default App;
